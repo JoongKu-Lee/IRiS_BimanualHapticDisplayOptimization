@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+
+	<xacro:arg name="robot_name" default="panda"/>
+  <xacro:arg name="x" default="0"/>
+  <xacro:arg name="y" default="0"/>
+  <xacro:arg name="z" default="0"/>
+  <xacro:arg name="roll" default="0"/>
+  <xacro:arg name="pitch" default="0"/>
+  <xacro:arg name="yaw" default="0"/>
+
+	<xacro:include filename="$(find master_optimization)/model/robots/panda_arm.xacro"/>
+
+	<xacro:panda_arm arm_id="$(arg robot_name)" connected_to='world' xyz='$(arg x) $(arg y) $(arg z)' rpy='$(arg roll) $(arg pitch) $(arg yaw)'/>
+
+
+
+</robot>

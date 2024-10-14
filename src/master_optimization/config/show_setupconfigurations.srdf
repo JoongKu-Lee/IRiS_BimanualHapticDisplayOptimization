@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="setup">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="leftarm">
+        <!-- <joint name="jT8LeftShoulder"/> -->
+        <joint name="jLeft_1"/>
+        <joint name="jLeft_2"/>
+        <joint name="jLeft_3"/>
+        <joint name="jLeft_4"/>
+        <joint name="jLeft_5"/>
+        <joint name="jLeft_6"/>
+        <joint name="jLeft_7"/>
+        <joint name="jLeft_8"/>
+    </group>
+    <group name="rightarm">
+        <!-- <joint name="jT8RightShoulder"/> -->
+        <joint name="jRight_1"/>
+        <joint name="jRight_2"/>
+        <joint name="jRight_3"/>
+        <joint name="jRight_4"/>
+        <joint name="jRight_5"/>
+        <joint name="jRight_6"/>
+        <joint name="jRight_7"/>
+        <joint name="jRight_8"/>
+    </group>
+    <group name="leftpanda1">
+        <joint name="leftpanda1_joint_world"/>
+        <joint name="leftpanda1_joint1"/>
+        <joint name="leftpanda1_joint2"/>
+        <joint name="leftpanda1_joint3"/>
+        <joint name="leftpanda1_joint4"/>
+        <joint name="leftpanda1_joint5"/>
+        <joint name="leftpanda1_joint6"/>
+        <joint name="leftpanda1_joint7"/>
+        <joint name="leftpanda1_joint8"/>
+        <joint name="leftpanda1_joint9"/>
+        <joint name="leftpanda1_joint10"/>
+    </group>
+    <group name="rightpanda1">
+        <joint name="rightpanda1_joint_world"/>
+        <joint name="rightpanda1_joint1"/>
+        <joint name="rightpanda1_joint2"/>
+        <joint name="rightpanda1_joint3"/>
+        <joint name="rightpanda1_joint4"/>
+        <joint name="rightpanda1_joint5"/>
+        <joint name="rightpanda1_joint6"/>
+        <joint name="rightpanda1_joint7"/>
+        <joint name="rightpanda1_joint8"/>
+        <joint name="rightpanda1_joint9"/>
+        <joint name="rightpanda1_joint10"/>
+    </group>
+        <group name="leftpanda2">
+        <joint name="leftpanda2_joint_world"/>
+        <joint name="leftpanda2_joint1"/>
+        <joint name="leftpanda2_joint2"/>
+        <joint name="leftpanda2_joint3"/>
+        <joint name="leftpanda2_joint4"/>
+        <joint name="leftpanda2_joint5"/>
+        <joint name="leftpanda2_joint6"/>
+        <joint name="leftpanda2_joint7"/>
+        <joint name="leftpanda2_joint8"/>
+        <joint name="leftpanda2_joint9"/>
+        <joint name="leftpanda2_joint10"/>
+    </group>
+    <group name="rightpanda2">
+        <joint name="rightpanda2_joint_world"/>
+        <joint name="rightpanda2_joint1"/>
+        <joint name="rightpanda2_joint2"/>
+        <joint name="rightpanda2_joint3"/>
+        <joint name="rightpanda2_joint4"/>
+        <joint name="rightpanda2_joint5"/>
+        <joint name="rightpanda2_joint6"/>
+        <joint name="rightpanda2_joint7"/>
+        <joint name="rightpanda2_joint8"/>
+        <joint name="rightpanda2_joint9"/>
+        <joint name="rightpanda2_joint10"/>
+    </group>
+        <group name="leftpanda3">
+        <joint name="leftpanda3_joint_world"/>
+        <joint name="leftpanda3_joint1"/>
+        <joint name="leftpanda3_joint2"/>
+        <joint name="leftpanda3_joint3"/>
+        <joint name="leftpanda3_joint4"/>
+        <joint name="leftpanda3_joint5"/>
+        <joint name="leftpanda3_joint6"/>
+        <joint name="leftpanda3_joint7"/>
+        <joint name="leftpanda3_joint8"/>
+        <joint name="leftpanda3_joint9"/>
+        <joint name="leftpanda3_joint10"/>
+    </group>
+    <group name="rightpanda3">
+        <joint name="rightpanda3_joint_world"/>
+        <joint name="rightpanda3_joint1"/>
+        <joint name="rightpanda3_joint2"/>
+        <joint name="rightpanda3_joint3"/>
+        <joint name="rightpanda3_joint4"/>
+        <joint name="rightpanda3_joint5"/>
+        <joint name="rightpanda3_joint6"/>
+        <joint name="rightpanda3_joint7"/>
+        <joint name="rightpanda3_joint8"/>
+        <joint name="rightpanda3_joint9"/>
+        <joint name="rightpanda3_joint10"/>
+    </group>
+    <group name="all">
+        <joint name="jT8LeftShoulder"/>
+        <joint name="jLeft_1"/>
+        <joint name="jLeft_2"/>
+        <joint name="jLeft_3"/>
+        <joint name="jLeft_4"/>
+        <joint name="jLeft_5"/>
+        <joint name="jLeft_6"/>
+        <joint name="jLeft_7"/>
+        <joint name="jT8RightShoulder"/>
+        <joint name="jRight_1"/>
+        <joint name="jRight_2"/>
+        <joint name="jRight_3"/>
+        <joint name="jRight_4"/>
+        <joint name="jRight_5"/>
+        <joint name="jRight_6"/>
+        <joint name="jRight_7"/>
+        <joint name="leftpanda1_joint_world"/>
+        <joint name="leftpanda1_joint1"/>
+        <joint name="leftpanda1_joint2"/>
+        <joint name="leftpanda1_joint3"/>
+        <joint name="leftpanda1_joint4"/>
+        <joint name="leftpanda1_joint5"/>
+        <joint name="leftpanda1_joint6"/>
+        <joint name="leftpanda1_joint7"/>
+        <joint name="leftpanda1_joint8"/>
+        <joint name="leftpanda1_joint9"/>
+        <joint name="leftpanda1_joint10"/>
+        <joint name="rightpanda1_joint_world"/>
+        <joint name="rightpanda1_joint1"/>
+        <joint name="rightpanda1_joint2"/>
+        <joint name="rightpanda1_joint3"/>
+        <joint name="rightpanda1_joint4"/>
+        <joint name="rightpanda1_joint5"/>
+        <joint name="rightpanda1_joint6"/>
+        <joint name="rightpanda1_joint7"/>
+        <joint name="rightpanda1_joint8"/>
+        <joint name="rightpanda1_joint9"/>
+        <joint name="rightpanda1_joint10"/>
+        <joint name="leftpanda2_joint_world"/>
+        <joint name="leftpanda2_joint1"/>
+        <joint name="leftpanda2_joint2"/>
+        <joint name="leftpanda2_joint3"/>
+        <joint name="leftpanda2_joint4"/>
+        <joint name="leftpanda2_joint5"/>
+        <joint name="leftpanda2_joint6"/>
+        <joint name="leftpanda2_joint7"/>
+        <joint name="leftpanda2_joint8"/>
+        <joint name="leftpanda2_joint9"/>
+        <joint name="leftpanda2_joint10"/>
+        <joint name="rightpanda2_joint_world"/>
+        <joint name="rightpanda2_joint1"/>
+        <joint name="rightpanda2_joint2"/>
+        <joint name="rightpanda2_joint3"/>
+        <joint name="rightpanda2_joint4"/>
+        <joint name="rightpanda2_joint5"/>
+        <joint name="rightpanda2_joint6"/>
+        <joint name="rightpanda2_joint7"/>
+        <joint name="rightpanda2_joint8"/>
+        <joint name="rightpanda2_joint9"/>
+        <joint name="rightpanda2_joint10"/>
+        <joint name="leftpanda3_joint_world"/>
+        <joint name="leftpanda3_joint1"/>
+        <joint name="leftpanda3_joint2"/>
+        <joint name="leftpanda3_joint3"/>
+        <joint name="leftpanda3_joint4"/>
+        <joint name="leftpanda3_joint5"/>
+        <joint name="leftpanda3_joint6"/>
+        <joint name="leftpanda3_joint7"/>
+        <joint name="leftpanda3_joint8"/>
+        <joint name="leftpanda3_joint9"/>
+        <joint name="leftpanda3_joint10"/>
+        <joint name="rightpanda3_joint_world"/>
+        <joint name="rightpanda3_joint1"/>
+        <joint name="rightpanda3_joint2"/>
+        <joint name="rightpanda3_joint3"/>
+        <joint name="rightpanda3_joint4"/>
+        <joint name="rightpanda3_joint5"/>
+        <joint name="rightpanda3_joint6"/>
+        <joint name="rightpanda3_joint7"/>
+        <joint name="rightpanda3_joint8"/>
+        <joint name="rightpanda3_joint9"/>
+        <joint name="rightpanda3_joint10"/>
+    </group>
+
+    <disable_collisions link1="Head" link2="Neck" reason="Adjacent"/>
+    <disable_collisions link1="L3" link2="L5" reason="Adjacent"/>
+    <disable_collisions link1="L3" link2="T12" reason="Adjacent"/>
+    <disable_collisions link1="L5" link2="Pelvis" reason="Adjacent"/>
+    <disable_collisions link1="Left3" link2="Left5" reason="Adjacent"/>
+    <disable_collisions link1="Left3" link2="LeftShoulder" reason="Adjacent"/>
+    <disable_collisions link1="Left5" link2="Left7" reason="Adjacent"/>
+    <disable_collisions link1="LeftShoulder" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="Neck" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="Right3" link2="Right5" reason="Adjacent"/>
+    <disable_collisions link1="Right3" link2="RightShoulder" reason="Adjacent"/>
+    <disable_collisions link1="Right5" link2="Right7" reason="Adjacent"/>
+    <disable_collisions link1="RightShoulder" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="T12" link2="T8" reason="Adjacent"/>
+
+    <!-- DISABLE COLLISION LEFT/RIGHT -->
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda1_link7"/>
+
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link7"/>
+
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link0" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link1" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link2" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link3" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link4" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link5" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link6" link2="rightpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link7" link2="rightpanda3_link7"/>
+
+    <!-- DISABLE COLLISION BETWEEN EACH ROBOT -->
+
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link0" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link1" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link2" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link3" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link4" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link5" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link6" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda1_link7" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link0" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link1" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link2" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link3" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link4" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link5" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link6" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link7" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link0" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link1" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link2" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link3" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link4" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link5" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link6" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link0"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link1"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link2"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link3"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link4"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link5"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link6"/>
+    <disable_collisions link1="leftpanda2_link7" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link0" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link1" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link2" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link3" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link4" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link5" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link6" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link7" link2="leftpanda3_link7"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda3_link7"/>
+
+
+
+
+    <disable_collisions link1="Left3" link2="rightpanda1_link0"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link1"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link2"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link3"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link4"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link5"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link6"/>
+    <disable_collisions link1="Left3" link2="rightpanda1_link7"/>
+    <disable_collisions link1="Left3" link2="Right3"/>
+    <disable_collisions link1="Left3" link2="Right5"/>
+    <disable_collisions link1="Left3" link2="Right7"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link0"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link1"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link2"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link3"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link4"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link5"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link6"/>
+    <disable_collisions link1="Left5" link2="rightpanda1_link7"/>
+    <disable_collisions link1="Left5" link2="Right3"/>
+    <disable_collisions link1="Left5" link2="Right5"/>
+    <disable_collisions link1="Left5" link2="Right7"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link0"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link1"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link2"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link3"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link4"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link5"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link6"/>
+    <disable_collisions link1="Left7" link2="rightpanda1_link7"/>
+    <disable_collisions link1="Left7" link2="Right3"/>
+    <disable_collisions link1="Left7" link2="Right5"/>
+    <disable_collisions link1="Left7" link2="Right7"/>
+
+    <disable_collisions link1="Right3" link2="leftpanda1_link0"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link1"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link2"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link3"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link4"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link5"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link6"/>
+    <disable_collisions link1="Right3" link2="leftpanda1_link7"/>
+    <disable_collisions link1="Right3" link2="Left3"/>
+    <disable_collisions link1="Right3" link2="Left5"/>
+    <disable_collisions link1="Right3" link2="Left7"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link0"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link1"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link2"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link3"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link4"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link5"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link6"/>
+    <disable_collisions link1="Right5" link2="leftpanda1_link7"/>
+    <disable_collisions link1="Right5" link2="Left3"/>
+    <disable_collisions link1="Right5" link2="Left5"/>
+    <disable_collisions link1="Right5" link2="Left7"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link0"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link1"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link2"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link3"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link4"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link5"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link6"/>
+    <disable_collisions link1="Right7" link2="leftpanda1_link7"/>
+    <disable_collisions link1="Right7" link2="Left3"/>
+    <disable_collisions link1="Right7" link2="Left5"/>
+    <disable_collisions link1="Right7" link2="Left7"/>
+
+
+    <disable_collisions link1="Left3" link2="RightShoulder" />
+    <disable_collisions link1="Left5" link2="RightShoulder" />
+    <disable_collisions link1="Left7" link2="RightShoulder" />
+
+    <disable_collisions link1="Right3" link2="LeftShoulder" />
+    <disable_collisions link1="Right5" link2="LeftShoulder" />
+    <disable_collisions link1="Right7" link2="LeftShoulder" />
+
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link7" reason="Default"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link7" reason="Default"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link7" reason="Default"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link7" reason="Default"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link7" reason="Default"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link7" reason="Default"/>
+
+    <!-- SELF -->
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link0" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link1" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link2" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link3" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link4" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link5" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link6" link2="leftpanda1_link7"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link0"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link1"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link2"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link3"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link4"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link5"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link6"/>
+    <disable_collisions link1="leftpanda1_link7" link2="leftpanda1_link7"/>
+
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link0" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link1" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link2" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link3" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link4" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link5" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link6" link2="rightpanda1_link7"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link0"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link1"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link2"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link3"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link4"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link5"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link6"/>
+    <disable_collisions link1="rightpanda1_link7" link2="rightpanda1_link7"/>
+
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link0" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link1" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link2" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link3" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link4" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link5" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link6" link2="leftpanda2_link7"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link0"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link1"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link2"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link3"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link4"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link5"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link6"/>
+    <disable_collisions link1="leftpanda2_link7" link2="leftpanda2_link7"/>
+
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link0" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link1" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link2" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link3" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link4" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link5" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link6" link2="rightpanda2_link7"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link0"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link1"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link2"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link3"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link4"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link5"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link6"/>
+    <disable_collisions link1="rightpanda2_link7" link2="rightpanda2_link7"/>
+
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link0" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link1" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link2" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link3" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link4" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link5" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link6" link2="leftpanda3_link7"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link0"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link1"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link2"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link3"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link4"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link5"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link6"/>
+    <disable_collisions link1="leftpanda3_link7" link2="leftpanda3_link7"/>
+
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link0" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link1" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link2" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link3" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link4" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link5" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link6" link2="rightpanda3_link7"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link0"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link1"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link2"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link3"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link4"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link5"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link6"/>
+    <disable_collisions link1="rightpanda3_link7" link2="rightpanda3_link7"/>
+
+
+</robot>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="human_tworobot">
+
+  <!-- BASE LINK -->
+  <link name="world"/>
+
+  <xacro:include filename="$(find master_optimization)/model/robots/panda_arm.xacro"/>
+  <!-- RIGHT ARM -->
+  <xacro:panda_arm arm_id="leftpanda" connected_to='world' xyz='0 0.5 0' rpy='0 0 0'/>
+
+  <!-- LEFT ARM -->
+  <xacro:panda_arm arm_id="rightpanda" connected_to="world"  xyz='0 -0.5 0' rpy='0 0 0'/>
+
+  <!-- HUMAN -->
+  <xacro:include filename="$(find master_optimization)/model/robots/human_upper_body.urdf"/>
+
+
+</robot>
+
+
+
+
+
+

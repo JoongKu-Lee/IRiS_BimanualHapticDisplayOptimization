@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="human_upper_body">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="leftarm">
+        <joint name="jLeft_1"/>
+        <joint name="jLeft_2"/>
+        <joint name="jLeft_3"/>
+        <joint name="jLeft_4"/>
+        <joint name="jLeft_5"/>
+        <joint name="jLeft_6"/>
+        <joint name="jLeft_7"/>
+        <joint name="jLeft_8"/>
+    </group>
+    <group name="rightarm">
+        <joint name="jRight_1"/>
+        <joint name="jRight_2"/>
+        <joint name="jRight_3"/>
+        <joint name="jRight_4"/>
+        <joint name="jRight_5"/>
+        <joint name="jRight_6"/>
+        <joint name="jRight_7"/>
+        <joint name="jRight_8"/>
+    </group>
+    <group name="all">
+        <joint name="jT8LeftShoulder"/>
+        <joint name="jLeft_1"/>
+        <joint name="jLeft_2"/>
+        <joint name="jLeft_3"/>
+        <joint name="jLeft_4"/>
+        <joint name="jLeft_5"/>
+        <joint name="jLeft_6"/>
+        <joint name="jLeft_7"/>
+        <joint name="jLeft_8"/>
+        <joint name="jT8RightShoulder"/>
+        <joint name="jRight_1"/>
+        <joint name="jRight_2"/>
+        <joint name="jRight_3"/>
+        <joint name="jRight_4"/>
+        <joint name="jRight_5"/>
+        <joint name="jRight_6"/>
+        <joint name="jRight_7"/>
+        <joint name="jRight_8"/>
+    </group>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="Head" link2="L3" reason="Never"/>
+    <disable_collisions link1="Head" link2="L5" reason="Never"/>
+    <disable_collisions link1="Head" link2="LeftShoulder" reason="Never"/>
+    <disable_collisions link1="Head" link2="Neck" reason="Adjacent"/>
+    <disable_collisions link1="Head" link2="Pelvis" reason="Never"/>
+    <disable_collisions link1="Head" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="Head" link2="T12" reason="Never"/>
+    <disable_collisions link1="Head" link2="T8" reason="Never"/>
+    <disable_collisions link1="L3" link2="L5" reason="Adjacent"/>
+    <disable_collisions link1="L3" link2="LeftShoulder" reason="Never"/>
+    <disable_collisions link1="L3" link2="Neck" reason="Never"/>
+    <disable_collisions link1="L3" link2="Pelvis" reason="Never"/>
+    <disable_collisions link1="L3" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="L3" link2="T12" reason="Adjacent"/>
+    <disable_collisions link1="L3" link2="T8" reason="Never"/>
+    <disable_collisions link1="L5" link2="LeftShoulder" reason="Never"/>
+    <disable_collisions link1="L5" link2="Neck" reason="Never"/>
+    <disable_collisions link1="L5" link2="Pelvis" reason="Adjacent"/>
+    <disable_collisions link1="L5" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="L5" link2="T12" reason="Never"/>
+    <disable_collisions link1="L5" link2="T8" reason="Never"/>
+    <disable_collisions link1="Left3" link2="Left5" reason="Adjacent"/>
+    <disable_collisions link1="Left3" link2="LeftShoulder" reason="Adjacent"/>
+    <disable_collisions link1="Left3" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="Left5" link2="Left7" reason="Adjacent"/>
+    <disable_collisions link1="LeftShoulder" link2="Neck" reason="Never"/>
+    <disable_collisions link1="LeftShoulder" link2="Pelvis" reason="Never"/>
+    <disable_collisions link1="LeftShoulder" link2="Right3" reason="Never"/>
+    <disable_collisions link1="LeftShoulder" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="LeftShoulder" link2="T12" reason="Never"/>
+    <disable_collisions link1="LeftShoulder" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="Neck" link2="Pelvis" reason="Never"/>
+    <disable_collisions link1="Neck" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="Neck" link2="T12" reason="Never"/>
+    <disable_collisions link1="Neck" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="Pelvis" link2="RightShoulder" reason="Never"/>
+    <disable_collisions link1="Pelvis" link2="T12" reason="Never"/>
+    <disable_collisions link1="Pelvis" link2="T8" reason="Never"/>
+    <disable_collisions link1="Right3" link2="Right5" reason="Adjacent"/>
+    <disable_collisions link1="Right3" link2="RightShoulder" reason="Adjacent"/>
+    <disable_collisions link1="Right5" link2="Right7" reason="Adjacent"/>
+    <disable_collisions link1="RightShoulder" link2="T12" reason="Never"/>
+    <disable_collisions link1="RightShoulder" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="T12" link2="T8" reason="Adjacent"/>
+    <disable_collisions link1="Left3" link2="Right3" reason="User"/>
+    <disable_collisions link1="Left3" link2="Right5" reason="User"/>
+    <disable_collisions link1="Left3" link2="Right7" reason="User"/>
+    <disable_collisions link1="Left5" link2="Right3" reason="User"/>
+    <disable_collisions link1="Left5" link2="Right5" reason="User"/>
+    <disable_collisions link1="Left5" link2="Right7" reason="User"/>
+    <disable_collisions link1="Left7" link2="Right3" reason="User"/>
+    <disable_collisions link1="Left7" link2="Right5" reason="User"/>
+    <disable_collisions link1="Left7" link2="Right7" reason="User"/>
+</robot>
